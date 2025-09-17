@@ -1,0 +1,326 @@
+/* === Base === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f172a; /* Slate-900 */
+  margin: 0;
+  color: #e2e8f0; /* Slate-200 */
+}
+
+/* === Containers === */
+.container,
+.container-editar {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1e293b; /* Slate-800 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  border: 1px solid #334155; /* Slate-700 */
+}
+
+.container-editar {
+  max-width: 500px;
+}
+
+/* === Títulos === */
+.titulo {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #93c5fd; /* Blue-300 */
+  text-align: center;
+}
+
+/* === Mensagens === */
+.mensagem {
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sucesso {
+  color: #34d399; /* Emerald-400 */
+}
+
+.erro {
+  color: #f87171; /* Red-400 */
+}
+
+.carregando {
+  padding: 2rem;
+  text-align: center;
+  color: #f1f5f9;
+}
+
+/* === Inputs === */
+.input-busca,
+.input-form,
+.input-repor {
+  padding: 0.75rem 1rem;
+  border: 1px solid #475569; /* Slate-600 */
+  border-radius: 8px;
+  background-color: #0f172a; /* Slate-900 */
+  color: #f1f5f9; /* Slate-100 */
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-busca {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.input-form::placeholder,
+.input-repor::placeholder,
+.input-busca::placeholder {
+  color: #94a3b8; /* Slate-400 */
+}
+
+/* === Reposição de estoque === */
+.input-repor {
+  width: 60px;
+  height: 36px;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+/* === Remove setinhas dos inputs number em todos navegadores === */
+
+/* Chrome, Safari, Edge */
+.input-repor::-webkit-inner-spin-button,
+.input-repor::-webkit-outer-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.input-repor[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* === Formulários === */
+.form-produto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-editar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* === Botões === */
+.botao {
+  min-width: 100px;
+  height: 36px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, font-size 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.botao:hover {
+  transform: scale(1.10);
+  font-size: 1.05rem;
+  border-radius: 999px;
+  padding: 0.5rem 0.6rem;
+}
+
+.hover-x {
+  font-size: 20px !important;     
+}
+
+.botao-excluir {
+  background-color: #ef4444;
+  color: white !important;
+  margin-left: 0.5rem;
+}
+
+.botao-editar {
+  background-color: #3b82f6; /* Blue-500 */
+  color: white;
+}
+
+
+.botao:hover {
+  filter: brightness(1.1);
+}
+
+/* === Tabela === */
+.tabela-clientes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.tabela-clientes th {
+  background-color: #1e3a8a; /* Indigo-900 */
+  color: #f1f5f9;
+  text-align: left;
+  padding: 0.75rem;
+}
+
+.tabela-clientes td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #334155;
+  color: #e2e8f0;
+}
+
+.tabela-clientes tr:hover {
+  background-color: #1e293b;
+}
+/* === Remover spin buttons universalmente === */
+
+/* Chrome, Safari, Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  display: none;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Opera */
+input[type=number]::-o-inner-spin-button,
+input[type=number]::-o-outer-spin-button {
+  display: none;
+}
+/* Container principal */
+.editar-cliente-container {
+  padding: 2rem;
+  max-width: 500px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.editar-cliente-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Inputs */
+.editar-cliente-container input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.editar-cliente-container input[type="text"]:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+/* Container principal em dark mode */
+.editar-cliente-container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  margin: 10rem auto;
+}
+/* Título */
+.editar-cliente-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #f3f3f3; /* texto claro */
+}
+
+/* Inputs */
+.editar-cliente-container input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #444; /* borda escura */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #2c2c2c; /* fundo do input */
+  color: #f3f3f3; /* texto claro */
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.editar-cliente-container input[type="text"]:focus {
+  border-color: #3b82f6;
+  outline: none;
+  background-color: #333;
+}
+
+/* Botão */
+.editar-cliente-container button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.editar-cliente-container button[type="submit"]:hover {
+  transform: scale(1.05);
+  background-color: #2563eb;
+}
+
+/* Mensagem de erro */
+.editar-cliente-container p.erro {
+  color: #ff6b6b;
+  text-align: center;
+}
+.botao-adicionar {
+  display: inline-block;
+  padding: 0.5rem 0.75rem; /* menor altura e largura */
+  font-size: 0.85rem;       /* texto menor */
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.botao-adicionar:hover {
+  background-color: #2563eb;
+  transform: scale(1.03);
+}
+
+.botao-adicionar:active {
+  transform: scale(0.97);
+}
+
+
+
+

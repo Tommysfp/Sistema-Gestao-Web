@@ -1,0 +1,57 @@
+/* VendaHistorico.css */
+
+.historico-container {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #1f2937; /* cinza escuro */
+  color: #f9fafb; /* quase branco */
+  border-radius: 12px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.historico-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #3b82f6; /* azul destaque */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #111827; /* fundo da tabela */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #3b82f6;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #374151;
+  font-size: 0.9rem;
+}
+
+tr:hover {
+  background-color: #1e293b;
+  transition: background-color 0.2s ease-in-out;
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  color: #9ca3af;
+  margin-top: 2rem;
+}
